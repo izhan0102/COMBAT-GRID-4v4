@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Battle Arena - Team Deathmatch</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <canvas id="gameCanvas"></canvas>
+    <div id="ui">
+        <!-- Top Header HUD -->
+        <div id="topHud">
+            <div class="hud-section">
+                <!-- Player Status -->
+                <div class="stat-item">
+                    <span class="stat-label">Health:</span>
+                    <div class="health-bar">
+                        <div class="health-fill" style="width: 100%;"></div>
+                    </div>
+                    <span class="stat-value" id="healthValue">100</span>
+                </div>
+                
+                <div class="stat-item">
+                    <span class="stat-label">Ammo:</span>
+                    <span class="stat-value ammo-display" id="ammo">30/30</span>
+                </div>
+                
+                <div class="stat-item">
+                    <span class="stat-label">Your Kills:</span>
+                    <span class="stat-value" id="playerKills">0</span>
+                </div>
+                
+                <div class="stat-item">
+                    <span class="stat-label">Team Kills:</span>
+                    <span class="stat-value" id="teamKills">0</span>
+                </div>
+            </div>
+            
+            <!-- Team Scores -->
+            <div class="team-stats">
+                <div class="team-score blue-team">
+                    🔵 <span id="teamScore">0</span>
+                </div>
+                <div style="color: #fff; font-size: 14px;">VS</div>
+                <div class="team-score red-team">
+                    🔴 <span id="enemyScore">0</span>
+                </div>
+            </div>
+        </div>
+        
+        <div id="crosshair"></div>
+        
+        <div id="gameOver">
+            <div class="game-over-content">
+                <!-- Content will be dynamically generated -->
+            </div>
+        </div>
+    </div>
+    
+    <script src="game.js"></script>
+    <script src="ui.js"></script>
+</body>
+</html>
